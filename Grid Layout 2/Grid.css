@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-size: 62.5%; /*Now, 1 rem = 10px */
+  background-color: #313131;
+}
+
+.header {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  color: white;
+  text-underline-offset: 0.5rem;
+}
+
+.outer-container {
+  font-size: 2rem;
+
+  /* width: 100%; */
+  padding: 2rem 2rem 0rem 2rem;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.subheading {
+  text-align: justify;
+}
+
+/* Outside Container */
+.gridcontainer {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(1, 1fr);
+
+  gap: 2rem;
+}
+
+/* Outer Grid Items */
+.griditem {
+  background-color: #ffffff5b;
+  box-shadow: 0 0 0.5rem #fff;
+  border-radius: 1rem;
+}
+
+/* Inner Grid */
+.innergrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 20rem 5rem auto auto;
+
+  background-color: #fff;
+  border-radius: 0.8rem;
+  color: black;
+}
+
+/* Inner Grid Items */
+.innergriditem {
+  border-radius: 1rem;
+}
+
+.innergriditem2,
+.innergriditem3,
+.innergriditem4 {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.innergriditem2 {
+  font-weight: 600;
+}
+
+.innergriditem3 {
+  text-align: justify;
+  padding: 0.5rem 2rem;
+}
+
+.innergriditem4 {
+  padding: 2rem;
+  background-color: antiquewhite;
+}
+
+/* Image */
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.footer {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background-color: #313131;
+}
+
+@media (min-width: 645px) and (max-width: 999px) {
+  /* Outside Container */
+  .gridcontainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  /* Outside Container */
+  .gridcontainer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1205px) {
+  .gridcontainer {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+}
